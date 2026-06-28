@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Leaf, Github, Instagram, Mail } from "lucide-react";
+import { Leaf, AtSign, Send, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -18,7 +18,7 @@ export function Footer() {
               compost and fair income for Indian farmers.
             </p>
             <div className="mt-5 flex gap-2">
-              {[Instagram, Github, Mail].map((Icon, i) => (
+              {[AtSign, Send, Mail].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
