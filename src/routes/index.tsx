@@ -29,9 +29,9 @@ function Home() {
       <Problems />
       <Pipeline />
       <FeaturedProducts />
-      <Stats />
       <Why />
       <FinalCta />
+
     </>
   );
 }
@@ -251,60 +251,8 @@ function FeaturedProducts() {
   );
 }
 
-function Stats() {
-  const stats = [
-    { v: 12500, s: "+", label: "Seeds saved" },
-    { v: 240, s: "+", label: "Farmers supported" },
-    { v: 1800, s: " kg", label: "Organic waste recycled" },
-    { v: 36, s: "", label: "Plantation projects" },
-  ];
-  return (
-    <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
-      <div className="card-surface relative overflow-hidden p-8 sm:p-12">
-        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
-        <SectionHeading
-          eyebrow="Impact so far"
-          title={<>Small seeds. <span className="text-primary">Measurable change.</span></>}
-        />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => <Counter key={s.label} {...s} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Counter({ v, s, label }: { v: number; s: string; label: string }) {
-  const [n, setN] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!ref.current) return;
-    const io = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
-        const dur = 1400, start = performance.now();
-        const tick = (t: number) => {
-          const p = Math.min(1, (t - start) / dur);
-          setN(Math.floor(v * (1 - Math.pow(1 - p, 3))));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-        io.disconnect();
-      }
-    }, { threshold: 0.4 });
-    io.observe(ref.current);
-    return () => io.disconnect();
-  }, [v]);
-  return (
-    <div ref={ref}>
-      <p className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
-        {n.toLocaleString("en-IN")}<span className="text-primary">{s}</span>
-      </p>
-      <p className="mt-2 text-sm text-muted-foreground">{label}</p>
-    </div>
-  );
-}
-
 function Why() {
+
   const items = [
     { icon: ShieldCheck, t: "Quality-tested seeds & saplings" },
     { icon: Recycle, t: "Eco-friendly composting cycle" },
