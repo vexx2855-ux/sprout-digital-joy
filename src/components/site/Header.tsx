@@ -20,7 +20,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 backdrop-blur-xl bg-background/70">
+    <header className="sticky top-0 z-50 border-b border-black/5 backdrop-blur-xl bg-background/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 group">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/40 group-hover:bg-primary/25 transition">
@@ -31,7 +31,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-1.5 py-1">
+        <nav className="hidden lg:flex items-center gap-1 rounded-full border border-black/10 bg-black/5 px-1.5 py-1">
           {NAV.map((n) => {
             const active = pathname === n.to;
             return (
@@ -58,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             to="/cart"
-            className="relative grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            className="relative grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black/5 hover:bg-black/10 transition"
             aria-label="Cart"
           >
             <ShoppingBag className="h-4.5 w-4.5" />
@@ -70,7 +70,7 @@ export function Header() {
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5"
+            className="lg:hidden grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black/5"
             aria-label="Menu"
           >
             {open ? <X className="h-4.5 w-4.5" /> : <Menu className="h-4.5 w-4.5" />}
@@ -84,7 +84,7 @@ export function Header() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden border-t border-white/5 bg-background/95"
+            className="lg:hidden overflow-hidden border-t border-black/5 bg-background/95"
           >
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6">
               {NAV.map((n) => (
@@ -92,7 +92,7 @@ export function Header() {
                   key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                  className="rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-black/5 hover:text-foreground"
                 >
                   {n.label}
                 </Link>
