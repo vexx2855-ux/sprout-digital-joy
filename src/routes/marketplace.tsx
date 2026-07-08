@@ -48,7 +48,7 @@ function Marketplace() {
         </p>
       </section>
 
-      <section className="sticky top-[60px] z-30 border-y border-white/5 bg-background/80 backdrop-blur-xl">
+      <section className="sticky top-[60px] z-30 border-y border-black/5 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
           <div className="grid gap-2 md:grid-cols-[1.4fr_repeat(5,1fr)]">
             <label className="relative">
@@ -57,7 +57,7 @@ function Marketplace() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search seeds, saplings…"
-                className="w-full rounded-xl border border-white/10 bg-white/5 py-2.5 pl-10 pr-3 text-sm outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/40"
+                className="w-full rounded-xl border border-black/10 bg-black/5 py-2.5 pl-10 pr-3 text-sm outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/40"
               />
             </label>
             <Select label="State" value={state} onChange={setState} options={STATES} />
@@ -101,7 +101,7 @@ function Select({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none rounded-xl border border-white/10 bg-white/5 px-3 pt-5 pb-1.5 text-sm outline-none focus:border-primary/60"
+        className="w-full appearance-none rounded-xl border border-black/10 bg-black/5 px-3 pt-5 pb-1.5 text-sm outline-none focus:border-primary/60"
       >
         {options.map((o) => <option key={o} value={o} className="bg-background">{o}</option>)}
       </select>

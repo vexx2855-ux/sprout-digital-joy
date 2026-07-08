@@ -57,12 +57,12 @@ function Cart() {
                     <p className="font-display font-semibold truncate">{i.product.name}</p>
                     <p className="text-xs text-muted-foreground">₹{i.product.price} · {i.product.unit}</p>
                   </div>
-                  <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1">
-                    <button onClick={() => setQty(i.product.id, i.qty - 1)} className="grid h-7 w-7 place-items-center rounded-full hover:bg-white/10">
+                  <div className="flex items-center gap-1 rounded-full border border-black/10 bg-black/5 p-1">
+                    <button onClick={() => setQty(i.product.id, i.qty - 1)} className="grid h-7 w-7 place-items-center rounded-full hover:bg-black/10">
                       <Minus className="h-3.5 w-3.5" />
                     </button>
                     <span className="w-6 text-center font-mono text-sm">{i.qty}</span>
-                    <button onClick={() => setQty(i.product.id, i.qty + 1)} className="grid h-7 w-7 place-items-center rounded-full hover:bg-white/10">
+                    <button onClick={() => setQty(i.product.id, i.qty + 1)} className="grid h-7 w-7 place-items-center rounded-full hover:bg-black/10">
                       <Plus className="h-3.5 w-3.5" />
                     </button>
                   </div>
@@ -92,7 +92,7 @@ function Cart() {
                 <p className="text-xs text-muted-foreground">Add ₹{500 - subtotal} more for free shipping.</p>
               )}
             </dl>
-            <div className="my-4 h-px bg-white/10" />
+            <div className="my-4 h-px bg-black/10" />
             <div className="flex items-baseline justify-between">
               <span className="font-display text-lg">Total</span>
               <span className="font-display text-2xl font-bold text-primary">₹{subtotal + shipping}</span>

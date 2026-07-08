@@ -144,7 +144,7 @@ function Marquee() {
     "Weather-aware advice", "Student-built", "Made in India", "Circular farming",
   ];
   return (
-    <div className="relative -mt-6 overflow-hidden border-y border-white/5 bg-white/[0.02] py-4">
+    <div className="relative -mt-6 overflow-hidden border-y border-black/5 bg-black/[0.02] py-4">
       <div className="flex w-max gap-12 animate-marquee">
         {[...tags, ...tags].map((t, i) => (
           <span key={i} className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
@@ -275,7 +275,7 @@ function Why() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center gap-4 rounded-2xl border border-white/8 bg-white/[0.02] p-4"
+              className="flex items-center gap-4 rounded-2xl border border-black/8 bg-black/[0.02] p-4"
             >
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/30">
                 <it.icon className="h-5 w-5 text-primary" />
