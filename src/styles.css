@@ -85,7 +85,7 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { color-scheme: dark; }
+  html { color-scheme: light; }
   body {
     background: var(--color-background);
     color: var(--color-foreground);
@@ -93,13 +93,14 @@
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
     background-image:
-      radial-gradient(at 12% 8%, oklch(0.86 0.22 130 / 0.10) 0, transparent 45%),
-      radial-gradient(at 88% 90%, oklch(0.65 0.16 150 / 0.12) 0, transparent 50%);
+      radial-gradient(at 12% 8%, oklch(0.72 0.18 80 / 0.12) 0, transparent 45%),
+      radial-gradient(at 88% 90%, oklch(0.62 0.14 130 / 0.10) 0, transparent 50%);
     background-attachment: fixed;
   }
   h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
 }
+
 
 @layer base {
   /* Grid backdrop utility */
