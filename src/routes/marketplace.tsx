@@ -7,9 +7,9 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/marketplace")({
   head: () => ({
     meta: [
-      { title: "Marketplace — Seedify" },
+      { title: "Marketplace — Sow Hope" },
       { name: "description", content: "Quality-tested seeds and saplings. Filter by state, weather, soil, water and season." },
-      { property: "og:title", content: "Seedify Marketplace" },
+      { property: "og:title", content: "Sow Hope Marketplace" },
       { property: "og:description", content: "Find the right seed for your land in seconds." },
     ],
   }),

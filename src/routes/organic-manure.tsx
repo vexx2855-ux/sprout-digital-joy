@@ -6,9 +6,9 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/organic-manure")({
   head: () => ({
     meta: [
-      { title: "Organic Manure — Seedify" },
-      { name: "description", content: "From fruit peels to fertile soil — naturally. Learn how Seedify composts agricultural waste." },
-      { property: "og:title", content: "Organic Manure by Seedify" },
+      { title: "Organic Manure — Sow Hope" },
+      { name: "description", content: "From fruit peels to fertile soil — naturally. Learn how Sow Hope composts agricultural waste." },
+      { property: "og:title", content: "Organic Manure by Sow Hope" },
       { property: "og:description", content: "Composted fruit waste, returned to Indian soil." },
     ],
   }),
