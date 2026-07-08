@@ -127,7 +127,7 @@ function SmartFarming() {
                   </p>
                   <ul className="mt-3 space-y-2">
                     {plan.tips.map((t, i) => (
-                      <li key={t} className="flex gap-3 rounded-xl border border-white/8 bg-white/[0.02] p-3 text-sm">
+                      <li key={t} className="flex gap-3 rounded-xl border border-black/8 bg-black/[0.02] p-3 text-sm">
                         <span className="font-mono text-primary">0{i + 1}</span>{t}
                       </li>
                     ))}
@@ -174,7 +174,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
+        className="mt-1.5 w-full rounded-xl border border-black/10 bg-black/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
       />
     </label>
   );
@@ -189,7 +189,7 @@ function Selector({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
+        className="mt-1.5 w-full rounded-xl border border-black/10 bg-black/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
       >
         {options.map((o) => <option key={o} value={o} className="bg-background">{o}</option>)}
       </select>
@@ -199,7 +199,7 @@ function Selector({
 
 function PlanBox({ icon: Icon, title, body }: { icon: typeof Droplets; title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
+    <div className="rounded-2xl border border-black/8 bg-black/[0.02] p-4">
       <div className="flex items-center gap-2 text-primary">
         <Icon className="h-4 w-4" />
         <span className="font-mono text-xs uppercase tracking-wider">{title}</span>
