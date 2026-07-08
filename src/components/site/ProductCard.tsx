@@ -44,7 +44,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       </div>
 
       {(product.weather || product.soil) && (
-        <dl className="mt-4 grid grid-cols-2 gap-1.5 rounded-lg border border-white/5 bg-black/20 p-3 text-[11px]">
+        <dl className="mt-4 grid grid-cols-2 gap-1.5 rounded-lg border border-black/5 bg-black/10 p-3 text-[11px]">
           {product.weather && <Row k="Weather" v={product.weather} />}
           {product.soil && <Row k="Soil" v={product.soil} />}
           {product.water && <Row k="Water" v={product.water} />}
