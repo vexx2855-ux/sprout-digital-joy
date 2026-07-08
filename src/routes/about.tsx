@@ -6,10 +6,10 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Seedify" },
+      { title: "About — Sow Hope" },
       { name: "description", content: "Why a group of Class 10 students decided to take on Indian agriculture." },
-      { property: "og:title", content: "About — Seedify" },
-      { property: "og:description", content: "Mission, vision and the story of how Seedify began." },
+      { property: "og:title", content: "About — Sow Hope" },
+      { property: "og:description", content: "Mission, vision and the story of how Sow Hope began." },
     ],
   }),
   component: About,
@@ -21,11 +21,11 @@ function About() {
       <section className="relative mx-auto max-w-5xl px-4 pt-24 pb-16 text-center sm:px-6">
         <span className="chip">Our story</span>
         <h1 className="mt-6 font-display text-5xl font-bold tracking-tighter sm:text-7xl text-balance">
-          Why we started <span className="text-shimmer">Seedify.</span>
+          Why we started <span className="text-shimmer">Sow Hope.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-balance text-muted-foreground sm:text-lg">
           We noticed something simple every time we passed a juice shop — handfuls of seeds being
-          thrown away. Those seeds could become trees, food, shade and income. Seedify is the
+          thrown away. Those seeds could become trees, food, shade and income. Sow Hope is the
           bridge between what is wasted and what could grow.
         </p>
       </section>
