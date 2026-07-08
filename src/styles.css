@@ -46,41 +46,42 @@
 :root {
   --radius: 0.875rem;
 
-  /* Modern Agritech — dark base, neon lime */
-  --background: oklch(0.16 0.02 150);
-  --foreground: oklch(0.96 0.01 100);
-  --surface: oklch(0.20 0.025 150);
-  --surface-2: oklch(0.24 0.03 150);
-  --card: oklch(0.20 0.025 150);
-  --card-foreground: oklch(0.96 0.01 100);
-  --popover: oklch(0.20 0.025 150);
-  --popover-foreground: oklch(0.96 0.01 100);
+  /* Warm Agritech — beige base, harvest yellow */
+  --background: oklch(0.94 0.02 85);
+  --foreground: oklch(0.26 0.04 80);
+  --surface: oklch(0.91 0.02 85);
+  --surface-2: oklch(0.87 0.025 85);
+  --card: oklch(0.91 0.02 85);
+  --card-foreground: oklch(0.26 0.04 80);
+  --popover: oklch(0.91 0.02 85);
+  --popover-foreground: oklch(0.26 0.04 80);
 
-  --primary: oklch(0.88 0.19 95);           /* yellow */
-  --primary-foreground: oklch(0.18 0.03 95);
-  --secondary: oklch(0.30 0.04 95);
-  --secondary-foreground: oklch(0.96 0.01 100);
-  --muted: oklch(0.24 0.03 95);
-  --muted-foreground: oklch(0.75 0.03 95);
-  --accent: oklch(0.88 0.19 95);
-  --accent-foreground: oklch(0.18 0.03 95);
+  --primary: oklch(0.72 0.18 80);           /* harvest yellow/gold */
+  --primary-foreground: oklch(0.18 0.03 80);
+  --secondary: oklch(0.86 0.03 85);
+  --secondary-foreground: oklch(0.26 0.04 80);
+  --muted: oklch(0.88 0.025 85);
+  --muted-foreground: oklch(0.50 0.04 80);
+  --accent: oklch(0.72 0.18 80);
+  --accent-foreground: oklch(0.18 0.03 80);
   --destructive: oklch(0.62 0.22 25);
   --destructive-foreground: oklch(0.98 0.01 100);
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.88 0.19 95);
+  --border: oklch(0.30 0.03 80 / 12%);
+  --input: oklch(0.30 0.03 80 / 16%);
+  --ring: oklch(0.72 0.18 80);
 
-  --leaf: oklch(0.78 0.16 95);
-  --leaf-deep: oklch(0.40 0.09 90);
-  --lime: oklch(0.88 0.19 95);
+  --leaf: oklch(0.62 0.14 130);
+  --leaf-deep: oklch(0.40 0.09 120);
+  --lime: oklch(0.72 0.18 80);
 
-  --cream: oklch(0.96 0.02 95);
+  --cream: oklch(0.96 0.02 85);
 }
 
 .dark {
-  --background: oklch(0.16 0.02 150);
-  --foreground: oklch(0.96 0.01 100);
+  --background: oklch(0.94 0.02 85);
+  --foreground: oklch(0.26 0.04 80);
 }
+
 
 @layer base {
   * { border-color: var(--color-border); }
