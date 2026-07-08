@@ -41,6 +41,6 @@ export const useCart = create<CartState>()(
       count: () => get().items.reduce((n, i) => n + i.qty, 0),
       subtotal: () => get().items.reduce((n, i) => n + i.qty * i.product.price, 0),
     }),
-    { name: "seedify-cart" },
+    { name: "sow-hope-cart" },
   ),
 );
