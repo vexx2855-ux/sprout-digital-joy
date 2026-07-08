@@ -6,10 +6,10 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Seedify" },
+      { title: "Contact — Sow Hope" },
       { name: "description", content: "We reply to every message — usually within a day." },
-      { property: "og:title", content: "Contact Seedify" },
-      { property: "og:description", content: "Reach the Seedify team. We answer within a day." },
+      { property: "og:title", content: "Contact Sow Hope" },
+      { property: "og:description", content: "Reach the Sow Hope team. We answer within a day." },
     ],
   }),
   component: Contact,
@@ -62,7 +62,7 @@ function Contact() {
 
           <div className="space-y-3">
             {[
-              { i: Mail, t: "hello@seedify.in", s: "Email us anytime" },
+              { i: Mail, t: "hello@sowhope.in", s: "Email us anytime" },
               { i: Phone, t: "+91 90000 12345", s: "Mon–Sat · 9am–6pm" },
               { i: MapPin, t: "New Delhi, India", s: "Visits by appointment" },
             ].map((c) => (

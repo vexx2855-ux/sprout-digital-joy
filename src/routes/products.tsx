@@ -6,9 +6,9 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products — Seedify" },
+      { title: "Products — Sow Hope" },
       { name: "description", content: "Sustainable, simple, rooted in tradition. Organic manure, neem cake, vermicompost and heritage products." },
-      { property: "og:title", content: "Seedify Products" },
+      { property: "og:title", content: "Sow Hope Products" },
       { property: "og:description", content: "Compost, neem cake, vermicompost and traditional wellness." },
     ],
   }),
