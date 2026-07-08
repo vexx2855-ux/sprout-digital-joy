@@ -73,7 +73,7 @@ function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="flex items-center gap-4 rounded-2xl border border-white/8 bg-white/[0.02] p-5"
+              className="flex items-center gap-4 rounded-2xl border border-black/8 bg-black/[0.02] p-5"
             >
               <span className="font-mono text-xs text-primary">0{i + 1}</span>
               <span>{c}</span>

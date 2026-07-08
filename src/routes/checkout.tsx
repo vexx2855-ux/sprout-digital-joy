@@ -136,12 +136,12 @@ function Checkout() {
               </li>
             ))}
           </ul>
-          <div className="my-4 h-px bg-white/10" />
+          <div className="my-4 h-px bg-black/10" />
           <dl className="space-y-1.5 text-sm">
             <Row k="Subtotal" v={`₹${subtotal}`} />
             <Row k="Shipping" v={shipping === 0 ? "FREE" : `₹${shipping}`} />
           </dl>
-          <div className="my-4 h-px bg-white/10" />
+          <div className="my-4 h-px bg-black/10" />
           <div className="flex items-baseline justify-between">
             <span className="font-display text-lg">Total</span>
             <span className="font-display text-2xl font-bold text-primary">₹{total}</span>
@@ -163,7 +163,7 @@ function Input({
         value={value}
         onChange={onChange}
         required={required}
-        className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
+        className="mt-1.5 w-full rounded-xl border border-black/10 bg-black/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
       />
     </label>
   );

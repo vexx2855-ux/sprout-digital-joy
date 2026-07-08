@@ -52,7 +52,7 @@ function Contact() {
                 name="message"
                 required
                 rows={5}
-                className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 p-3 text-sm outline-none focus:border-primary/60"
+                className="mt-1.5 w-full rounded-xl border border-black/10 bg-black/5 p-3 text-sm outline-none focus:border-primary/60"
               />
             </label>
             <button type="submit" className="btn-primary w-full">
@@ -101,7 +101,7 @@ function Input({ label, name, type = "text", required }: { label: string; name: 
         name={name}
         type={type}
         required={required}
-        className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
+        className="mt-1.5 w-full rounded-xl border border-black/10 bg-black/5 px-3 py-2.5 text-sm outline-none focus:border-primary/60"
       />
     </label>
   );
