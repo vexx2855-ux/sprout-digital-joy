@@ -11,7 +11,7 @@ export function Footer() {
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/40">
                 <Leaf className="h-5 w-5 text-primary" />
               </span>
-              <span className="font-display text-lg font-bold">AGRIVIO<span className="text-primary">.</span></span>
+              <span className="font-display text-lg font-bold uppercase tracking-tight">Agrivio<span className="text-primary">.</span></span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               A student innovation turning fruit-market waste into seeds, saplings,
