@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { Toaster } from "sonner";
+import { LanguageProvider } from "../lib/i18n";
 
 import "@fontsource-variable/inter/index.css";
 import "@fontsource/space-grotesk/400.css";
@@ -114,13 +115,15 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
       <Toaster
         theme="dark"
         position="bottom-right"

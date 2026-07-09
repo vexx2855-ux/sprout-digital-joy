@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Leaf, AtSign, Send, Mail } from "lucide-react";
+import { useT } from "@/lib/i18n";
 
 export function Footer() {
+  const { t } = useT();
   return (
     <footer className="mt-32 border-t border-black/5 bg-background/60">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
@@ -14,8 +16,7 @@ export function Footer() {
               <span className="font-display text-lg font-bold uppercase tracking-tight">Agrivio<span className="text-primary">.</span></span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              A student innovation turning fruit-market waste into seeds, saplings,
-              compost and fair income for Indian farmers.
+              {t("footer.tag")}
             </p>
             <div className="mt-5 flex gap-2">
               {[AtSign, Send, Mail].map((Icon, i) => (
@@ -30,19 +31,19 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Explore</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{t("footer.explore")}</p>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link to="/marketplace" className="hover:text-primary">Marketplace</Link></li>
-              <li><Link to="/smart-farming" className="hover:text-primary">Smart Farming</Link></li>
-              <li><Link to="/organic-manure" className="hover:text-primary">Organic Manure</Link></li>
-              <li><Link to="/products" className="hover:text-primary">Products</Link></li>
+              <li><Link to="/marketplace" className="hover:text-primary">{t("nav.marketplace")}</Link></li>
+              <li><Link to="/smart-farming" className="hover:text-primary">{t("nav.smart")}</Link></li>
+              <li><Link to="/organic-manure" className="hover:text-primary">{t("nav.manure")}</Link></li>
+              <li><Link to="/products" className="hover:text-primary">{t("nav.products")}</Link></li>
             </ul>
           </div>
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Project</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{t("footer.project")}</p>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-primary">About</Link></li>
-              <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+              <li><Link to="/about" className="hover:text-primary">{t("nav.about")}</Link></li>
+              <li><Link to="/contact" className="hover:text-primary">{t("nav.contact")}</Link></li>
               <li><Link to="/cart" className="hover:text-primary">Cart</Link></li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import {
   ArrowRight, Sprout, CloudSun, Wallet, Recycle, Leaf, ShieldCheck,
   Compass, Sparkles, ChevronDown,
@@ -8,6 +8,7 @@ import {
 import { PRODUCTS } from "@/lib/products";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,6 +42,7 @@ function Hero() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const { t, lang } = useT();
 
   return (
     <section ref={ref} className="relative isolate overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
@@ -50,41 +52,44 @@ function Hero() {
 
       <motion.div style={{ y, opacity }} className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
         <motion.span
+          key={`chip-${lang}`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="chip"
         >
-          <Sparkles className="h-3.5 w-3.5" /> A student innovation for sustainable farming
+          <Sparkles className="h-3.5 w-3.5" /> {t("hero.chip")}
         </motion.span>
 
         <h1 className="mt-8 font-display text-5xl font-bold leading-[0.95] tracking-tighter text-balance sm:text-7xl md:text-8xl">
           <motion.span
+            key={`t1-${lang}`}
             initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8 }}
             className="block"
           >
-            Growing futures,
+            {t("hero.title1")}
           </motion.span>
           <motion.span
+            key={`t2-${lang}`}
             initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.15 }}
             className="block text-shimmer"
           >
-            one seed at a time.
+            {t("hero.title2")}
           </motion.span>
         </h1>
 
         <motion.p
+          key={`sub-${lang}`}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg"
         >
-          Agrivio turns discarded fruit seeds and farm residue into quality saplings,
-          organic compost and a fair, transparent marketplace for Indian farmers.
+          {t("hero.sub")}
         </motion.p>
 
         <motion.div
@@ -94,10 +99,10 @@ function Hero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <Link to="/marketplace" className="btn-primary">
-            Explore marketplace <ArrowRight className="h-4 w-4" />
+            {t("hero.cta1")} <ArrowRight className="h-4 w-4" />
           </Link>
           <Link to="/about" className="btn-ghost">
-            <Compass className="h-4 w-4" /> Our story
+            <Compass className="h-4 w-4" /> {t("hero.cta2")}
           </Link>
         </motion.div>
 
