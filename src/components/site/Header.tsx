@@ -3,21 +3,24 @@ import { Leaf, ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/lib/cart-store";
 import { motion, AnimatePresence } from "framer-motion";
+import { useT } from "@/lib/i18n";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/marketplace", label: "Marketplace" },
-  { to: "/smart-farming", label: "Smart Farming" },
-  { to: "/organic-manure", label: "Manure" },
-  { to: "/products", label: "Products" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", key: "nav.home" },
+  { to: "/about", key: "nav.about" },
+  { to: "/marketplace", key: "nav.marketplace" },
+  { to: "/smart-farming", key: "nav.smart" },
+  { to: "/organic-manure", key: "nav.manure" },
+  { to: "/products", key: "nav.products" },
+  { to: "/contact", key: "nav.contact" },
 ] as const;
 
 export function Header() {
   const count = useCart((s) => s.items.reduce((n, i) => n + i.qty, 0));
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [open, setOpen] = useState(false);
+  const { t } = useT();
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 backdrop-blur-xl bg-background/70">
@@ -49,13 +52,14 @@ export function Header() {
                     transition={{ type: "spring", stiffness: 400, damping: 32 }}
                   />
                 )}
-                <span className="relative">{n.label}</span>
+                <span className="relative">{t(n.key)}</span>
               </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <Link
             to="/cart"
             className="relative grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black/5 hover:bg-black/10 transition"
@@ -94,7 +98,7 @@ export function Header() {
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-black/5 hover:text-foreground"
                 >
-                  {n.label}
+                  {t(n.key)}
                 </Link>
               ))}
             </div>
