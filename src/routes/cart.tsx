@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Cart — Sow Hope" },
+      { title: "Cart — Agrivio" },
       { name: "description", content: "Review your seeds, saplings and compost before checkout." },
     ],
   }),

@@ -27,7 +27,7 @@ export function Header() {
             <Leaf className="h-5 w-5 text-primary" />
           </span>
           <span className="font-display text-lg font-bold tracking-tight">
-            sow hope<span className="text-primary">.</span>
+            AGRIVIO<span className="text-primary">.</span>
           </span>
         </Link>
 

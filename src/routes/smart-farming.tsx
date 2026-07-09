@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/smart-farming")({
   head: () => ({
     meta: [
-      { title: "Smart Farming — Sow Hope" },
+      { title: "Smart Farming — Agrivio" },
       { name: "description", content: "Tell us about your field, get a clear, simple plan with weather-aware crop guidance." },
       { property: "og:title", content: "Smart Farming Planner" },
       { property: "og:description", content: "A weather-aware crop plan tailored to your soil and irrigation." },
@@ -37,7 +37,7 @@ function buildPlan(soil: string, irrigation: string, crop: string): Plan {
       : irrigation === "Flood"
       ? "Flood every 7 days; ensure drainage to prevent root rot."
       : "Rely on rain; build raised beds + mulch to extend moisture.",
-    fertilizer: "Top-dress with Sow Hope Vermicompost (5kg) every 21 days. Add Neem Cake at flowering.",
+    fertilizer: "Top-dress with Agrivio Vermicompost (5kg) every 21 days. Add Neem Cake at flowering.",
     warnings,
     tips: [
       "Sow at dawn or dusk — heat stress halves germination.",
