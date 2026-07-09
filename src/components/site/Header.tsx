@@ -26,8 +26,8 @@ export function Header() {
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/40 group-hover:bg-primary/25 transition">
             <Leaf className="h-5 w-5 text-primary" />
           </span>
-          <span className="font-display text-lg font-bold tracking-tight">
-            sow hope<span className="text-primary">.</span>
+          <span className="font-display text-lg font-bold tracking-tight uppercase">
+            Agrivio<span className="text-primary">.</span>
           </span>
         </Link>
 

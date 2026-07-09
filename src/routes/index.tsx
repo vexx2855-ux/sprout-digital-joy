@@ -12,9 +12,9 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sow Hope — Growing Futures, One Seed at a Time" },
+      { title: "Agrivio — Growing Futures, One Seed at a Time" },
       { name: "description", content: "Student-led sustainable agritech. Quality seeds, smart farming guidance, organic manure and a fair marketplace for Indian farmers." },
-      { property: "og:title", content: "Sow Hope — Growing Futures, One Seed at a Time" },
+      { property: "og:title", content: "Agrivio — Growing Futures, One Seed at a Time" },
       { property: "og:description", content: "From discarded fruit seeds to thriving farms. Explore the marketplace, smart farming tools and organic products." },
     ],
   }),
@@ -83,7 +83,7 @@ function Hero() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg"
         >
-          Sow Hope turns discarded fruit seeds and farm residue into quality saplings,
+          Agrivio turns discarded fruit seeds and farm residue into quality saplings,
           organic compost and a fair, transparent marketplace for Indian farmers.
         </motion.p>
 
@@ -168,7 +168,7 @@ function Problems() {
       <SectionHeading
         eyebrow="The problem"
         title={<>Indian farming wastes what could grow.</>}
-        description="Four things are broken in the loop between fruit markets and farms. Sow Hope closes them."
+        description="Four things are broken in the loop between fruit markets and farms. Agrivio closes them."
       />
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((it, i) => (
@@ -196,7 +196,7 @@ function Pipeline() {
   const steps = [
     { n: "01", t: "Fruit markets & juice shops", d: "Seeds collected from daily fruit waste." },
     { n: "02", t: "Cleaning & quality check", d: "Hand-sorted, dried and tested in our lab." },
-    { n: "03", t: "Sow Hope marketplace", d: "Listed with weather, soil and season data." },
+    { n: "03", t: "Agrivio marketplace", d: "Listed with weather, soil and season data." },
     { n: "04", t: "Farmers", d: "Direct, fair, fast — no middlemen." },
     { n: "05", t: "Higher income", d: "Better seeds, better yields, better margins." },
   ];
@@ -263,7 +263,7 @@ function Why() {
     <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <SectionHeading
-          eyebrow="Why Sow Hope"
+          eyebrow="Why Agrivio"
           title={<>Built by students. Designed for farmers.</>}
           description="We are not a corporation. We are Class 10 students who believe small ideas can grow into national change."
         />

@@ -11,7 +11,7 @@ export function Footer() {
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/40">
                 <Leaf className="h-5 w-5 text-primary" />
               </span>
-              <span className="font-display text-lg font-bold">sow hope<span className="text-primary">.</span></span>
+              <span className="font-display text-lg font-bold uppercase tracking-tight">Agrivio<span className="text-primary">.</span></span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               A student innovation turning fruit-market waste into seeds, saplings,
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-black/5 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Sow Hope. A Class 10 student initiative.</p>
+          <p>© {new Date().getFullYear()} Agrivio. A Class 10 student initiative.</p>
           <p className="font-mono">Made with 🌱 in India</p>
         </div>
       </div>
