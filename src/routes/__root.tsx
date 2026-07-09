@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { Toaster } from "sonner";
+import { LanguageProvider } from "../lib/i18n";
 
 import "@fontsource-variable/inter/index.css";
 import "@fontsource/space-grotesk/400.css";
